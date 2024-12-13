@@ -1,18 +1,18 @@
 body {
+    
     height: 90vh;
     background-color: #F8C8DC;
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    padding: 0;
 }
 
-/* Hidden content */
 #ans {
     display: none;
 }
 
-#ansvideo,
-#novideo {
+#ansvideo{
+    visibility: hidden;
+}
+
+#novideo{
     visibility: hidden;
 }
 
@@ -28,6 +28,7 @@ body {
 }
 
 .header_text {
+    font-family: 'Nunito';
     font-size: 50px;
     font-weight: bold;
     color: black;
@@ -37,6 +38,7 @@ body {
 }
 
 .text {
+    font-family: 'Nunito';
     font-size: 25px;
     font-weight: bold;
     color: white;
@@ -55,7 +57,7 @@ body {
 }
 
 .btn {
-    background-color: #fb6d82;
+    background-color: #FFB6C1;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -78,78 +80,33 @@ body {
     align-items: center;
 }
 
-.qrimage {
+.qrimage{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 350px;
-    height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 350px;
+  height: auto;
 }
 
-img {
+img
+{
     max-width: 100%;
     height: auto;
     cursor: pointer;
 }
 
-/* Media Queries for Mobile */
 @media only screen and (max-width: 600px) {
-    /* Header text adjustments for mobile */
-    .header_text {
-        font-size: 30px;  /* Smaller font size on mobile */
-        margin-top: 10px;
+    .header_text{
+        color: black;
+        font-size: 40px;
     }
-
-    /* Adjust QR image size */
-    .qrimage {
-        max-width: 80%;  /* More responsive for mobile screens */
-        padding-left: 10%;
-        padding-right: 10%;
+    .qrimage{
+        max-width: 50%;
+        padding-left: 25%;
     }
-
-    /* Button adjustments for mobile */
-    .buttons {
-        flex-direction: column;  /* Stack buttons vertically */
-        gap: 10px;
-    }
-
-    .btn {
-        padding: 12px 28px; /* Smaller padding for mobile */
-        font-size: 14px;     /* Slightly smaller font size */
-        width: 80%;          /* Buttons take up more width */
-        text-align: center;
-    }
-
-    #noButton {
-        margin-left: 0;   /* Remove fixed margin for smaller screens */
-    }
-
-    /* Adjust gif container and image sizes for mobile */
-    .gif_container {
-        margin-left: 0;
-        width: 100%;
+    .gif_container{
+        margin-left:0;
         height: auto;
+        width: auto;
     }
-
-    /* Adjust button position for mobile */
-    #noButton, #yesButton {
-        position: relative; /* Make positioning relative for flexibility */
-    }
-
-    img {
-        max-width: 80%; /* Limit image width for mobile */
-        margin: 0 auto;
-    }
-}
-
-/* Further optimization for larger mobile screens */
-@media only screen and (max-width: 400px) {
-    .header_text {
-        font-size: 24px;  /* Adjust font size further on very small screens */
-    }
-
-    .btn {
-        padding: 10px 20px;  /* Smaller buttons for very small screens */
-        font-size: 12px;
-    }
-}
+  }
